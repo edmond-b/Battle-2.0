@@ -3,11 +3,7 @@ require 'sinatra/base'
 class Battle < Sinatra::Base
 
     get '/' do
-      "BATTLE!"
-    end
-
-    get '/form' do
-      erb(:index)
+      erb(:form)
     end
 
     post '/names' do
