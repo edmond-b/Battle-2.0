@@ -19,5 +19,9 @@ enable :sessions
       erb(:play)
     end
 
+    get "/win" do
+      erb(:win)
+    end
+
     run! if app_file ==$0
   end
