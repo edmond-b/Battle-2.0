@@ -6,6 +6,7 @@ feature "Testing Attack" do
   end
 
   scenario "reduce player 2 hp when attacked" do
+    srand(10)
     sign_in_and_play
     click_button('Attack')
     click_button('OK')

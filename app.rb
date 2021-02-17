@@ -28,8 +28,21 @@ enable :sessions
 
     get "/attack" do
       @game = $game
-      @game.attack(@game.opponent)
       erb(:attack)
+    end
+
+    post '/attack' do
+      $game.attack($game.opponent)
+      if $game.game_over?
+        redirect '/game-over'
+      else
+        redirect '/attack'
+      end
+    end
+
+    get '/game-over' do
+      @game = $game
+      erb(:game_over)
     end
 
     run! if app_file ==$0

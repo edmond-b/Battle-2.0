@@ -18,6 +18,7 @@ describe Player do
 
   describe 'Player recive damage' do
     it 'Reduces the players HP' do
+      srand(10)
       expect{ player_1.receive_damage }.to change{ player_1.hit_points }.by(-10)
     end
   end
