@@ -23,8 +23,8 @@ enable :sessions
 
     get "/attack" do
       @game = $game
-      @player_2 = @game.player_2
-      @game.attack(@player_2)
+      @game.attack(@game.player_2)
+      @game.switch_turn
       erb(:attack)
     end
 
