@@ -16,6 +16,11 @@ enable :sessions
       redirect '/play'
     end
 
+    post '/switch-turn' do
+      $game.switch_turn
+      redirect '/play'
+    end
+
     get '/play' do
       @game = $game
       erb(:play)
@@ -23,8 +28,7 @@ enable :sessions
 
     get "/attack" do
       @game = $game
-      @game.attack(@game.player_2)
-      @game.switch_turn
+      @game.attack(@game.opponent)
       erb(:attack)
     end
 
