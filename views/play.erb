@@ -1,12 +1,24 @@
-<h1>
-<%= @game.player_1.name %> Vs <%= @game.player_2.name %>
-</h1>
-<%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
-<br>
-<%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
-<h3>
-<%= @game.current_turn.name %>'s turn
-</h3>
-<form action="/attack" method="post">
-<input type="submit" value="Attack">
-</form>
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>Battle</title>
+      <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+      <h1>
+        <%= @game.player_1.name %> Vs <%= @game.player_2.name %>
+      </h1>
+      <p>
+        <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
+        <br>
+        <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
+      </p>
+      <h3>
+        <%= @game.current_turn.name %>'s turn
+      </h3>
+      <form action="/attack" method="post">
+        <input type="submit" value="Attack">
+      </form>
+    </body>
+  </html>
