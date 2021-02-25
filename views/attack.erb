@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <title>Battle</title>
-      <link href="style.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-      <h1>
-        <%= @game.current_turn.name %> attacked <%= @game.opponent.name %>
-      </h1>
-      <br>
-      <form action="/switch-turn" method="post">
-        <input type="submit" value="OK">
-      </form>
-    </body>
-  </html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Battle</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>
+      <%= @game.current_turn.name %> attacked <%= @game.opponent.name %>
+    </h1>
+    <br>
+    <form action="/switch-turn" method="post">
+      <input type="submit" value="OK">
+    </form>
+  </body>
+</html>

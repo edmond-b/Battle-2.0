@@ -6,6 +6,10 @@ class Battle < Sinatra::Base
 enable :sessions
 
     get '/' do
+      erb(:landing)
+    end
+
+    get '/form' do
       erb(:form)
     end
 
