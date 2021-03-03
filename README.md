@@ -1,4 +1,4 @@
-# Battle-2.0
+# Nokemon
 
 ## This is a Pokémon clone built with Sinatra. 
 
